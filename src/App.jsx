@@ -50,7 +50,7 @@ const App= () => {
     if (searchTerm) { 
       getMovies();
     }
-  });
+  }, [searchTerm]);
 
 
 return (
@@ -60,7 +60,7 @@ return (
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
       <div className='row'>
-      <MovieList movies={movies}/>
+      <MovieList movie={movies}/>
     </div>
   </div>
 )
