@@ -57,7 +57,7 @@ return (
   <div className='container-fluid movie-app'>
     <div className='row d-flex align-items-center mt-4 mb-4'>
       <MovieListHeader header="Movie List" />
-      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} getMovies={getMovies}/>
       </div>
       <div className='row'>
       <MovieList movie={movies}/>
