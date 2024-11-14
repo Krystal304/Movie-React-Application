@@ -11,8 +11,8 @@ const App= () => {
   // set state
   // const apiKey = "5e12f80e";
   // const apiKey = import.meta.env.VITE_API_KEY;
-  const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [movies, setMovies] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
 
 
@@ -36,7 +36,7 @@ const App= () => {
 
   } else {
     console.error('no movies found')
-    setMovies([]);
+    setMovies(null);
   }
 
   
@@ -50,14 +50,14 @@ const App= () => {
     if (searchTerm) { 
       getMovies();
     }
-  }, [searchTerm]);
+  });
 
 
 return (
   <div className='container-fluid movie-app'>
-    <div className='row'>
+    <div className='row d-flex align-items-center mt-4 mb-4'>
       <MovieListHeader header="Movie List" />
-      <Search setSearchTerm={setSearchTerm} />
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
       <div className='row'>
       <MovieList movies={movies}/>
