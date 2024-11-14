@@ -1,8 +1,9 @@
-const Search = ({ searchTerm, setSearchTerm }) => {
+const Search = ({ searchTerm, setSearchTerm, getMovies }) => {
     const handleSearchClick = (event) => {
+        event.preventDefault();
         if(searchTerm)
+
       getMovies(searchTerm);
-      event.preventDefault();
     }
   return (
     <div className="col col-sm-4">

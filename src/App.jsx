@@ -29,15 +29,16 @@ const App= () => {
 
     const response = await axios.get(url);
    console.log(response.data);
+   setMovies(response.data);
 
 
-   if(response.data && response.data.Search) {
-    setMovies(response.data.Search);
+  //  if(response.data && response.data.Search) {
+  //   setMovies(response.data.Search);
 
-  } else {
-    console.error('no movies found')
-    setMovies(null);
-  }
+  // } else {
+  //   console.error('no movies found')
+  //   setMovies(null);
+  // }
 
   
     } catch (error) {

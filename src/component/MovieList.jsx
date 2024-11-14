@@ -20,32 +20,32 @@
 
 // export default MovieList
 
-
 import React from 'react';
 
-function MovieList({ movie }) {  
-  if (!movie) {  
-    return <p>No movie found.</p>;
-  }
-
+function MovieList({ movie }) {
   return (
-    <div className='d-flex flex-column align-items-center'>
-      <div className='m-3'>
-        <img
-          src={movie.Poster !== "N/A" ? movie.Poster : "default-placeholder.jpg"} 
-          alt={movie.Title}
-          style={{ width: "150px", height: "225px" }} 
-        />
-        <p>{movie.Title}</p>
-        <p>{movie.Year}</p>
-        <p>{movie.Genre}</p>
-        <p>{movie.Plot}</p>
-        <p>Director: {movie.Director}</p>
-        <p>Actors: {movie.Actors}</p>
-        <p>Rating: {movie.imdbRating}</p>
+    !movie ? (
+      <p>No movie found</p> // This is shown when there is no movie
+    ) : (
+      <div className='d-flex flex-column align-items-center'>
+        <div className='m-3'>
+          <img
+            src={movie.Poster !== "N/A" ? movie.Poster : "default-placeholder.jpg"} 
+            alt={movie.Title}
+            style={{ width: "150px", height: "225px" }} 
+          />
+          <p>{movie.Title}</p>
+          <p>{movie.Year}</p>
+          <p>{movie.Genre}</p>
+          <p>{movie.Plot}</p>
+          <p>Director: {movie.Director}</p>
+          <p>Actors: {movie.Actors}</p>
+          <p>Rating: {movie.imdbRating}</p>
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
 export default MovieList;
+
