@@ -3,31 +3,31 @@ A React-based web application that allows users to search for movies and view de
 
 ---
 
-## Features ✨
+### Features ✨
 - **Search Movies**: Search for movies by title.
 - **Movie Details**: View details including the title, release year, genre, plot, director, cast, and IMDb rating.
 - **Responsive Design**: Built with Bootstrap for a clean, responsive UI.
 
-## Technologies Used
+### Technologies Used
 - **React**: Frontend framework
 - **Axios**: HTTP client for API requests
 - **Bootstrap**: Styling and layout
 - **OMDb API**: Source of movie data
 
-## How to use
+### How to use
 1. Search for a movie:
 - Enter a movie title in the search bar.
 - Click the "Search" button fot fetch and display details.
 2. View Movie Details:
 - The movie's poster, title, year, genre, plot, director, cast, and IMDb rating are displayed.
 
-## Contributing
+### Contributing
 Contributions are welcome! Feel free to submit issues or pull requests.
 
-## Author:
+### Author:
 - [Krystal Williams] (https://github.com/Krystal304)
 
-## Acknowledgments 🙏
+### Acknowledgments 🙏
 Thanks to OMDb API for providing the movie database.
 
 
