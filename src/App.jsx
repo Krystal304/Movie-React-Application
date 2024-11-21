@@ -20,25 +20,17 @@ const App= () => {
   const getMovies = async(searchTerm) => {
     const apiKey = "5e12f80e";
 
-    // const apiKey = import.meta.env.VITE_API_KEY;
+ 
 
 
     try{
       const url =`http://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`
-      // const ur1 =  `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_apiKey}&t=${searchTerm}`;
+     
 
     const response = await axios.get(url);
    console.log(response.data);
    setMovies(response.data);
 
-
-  //  if(response.data && response.data.Search) {
-  //   setMovies(response.data.Search);
-
-  // } else {
-  //   console.error('no movies found')
-  //   setMovies(null);
-  // }
 
   
     } catch (error) {
