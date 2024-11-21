@@ -29,7 +29,7 @@ Contributions are welcome! Feel free to submit issues or pull requests.
 
 ## Acknowledgments 🙏
 Thanks to OMDb API for providing the movie database.
-markdown
+
 
 
 
